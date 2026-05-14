@@ -1,0 +1,8 @@
+base_url = "http://localhost:11434"
+fee_ratio_threshold = 0.01
+fee_threshold = 29
+last_folder_path = ""
+mapping_csv_path = "mapping.csv"
+mistral_api_key = ""
+mistral_interval_sec = 30
+model_choice = "mistral-medium-latest"

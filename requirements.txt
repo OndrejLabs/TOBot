@@ -1,0 +1,10 @@
+customtkinter
+loguru
+mistralai
+openai
+pandas
+pdfplumber
+pydantic
+PyMuPDF
+requests
+tomli-w
