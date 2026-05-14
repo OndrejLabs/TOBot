@@ -10,17 +10,6 @@ current_os = platform.system()
 if current_os == 'Darwin':
     # Mac needs .icns embedded into the .app bundle
     app_icon = os.path.join(SPECPATH, 'assets', 'icon.icns')
-    app = BUNDLE(
-        coll,
-        name='TOBot.app',
-        icon=app_icon,
-        bundle_identifier='com.tobot.app',
-        info_plist={
-            'NSPrincipalClass': 'NSApplication',
-            'NSAppleScriptEnabled': False,
-            'NSHighResolutionCapable': 'True' # Ensures the GUI doesn't look blurry on Retina displays
-        },
-    )
 elif current_os == 'Windows':
     # Windows needs .ico embedded into the .exe
     app_icon = os.path.join(SPECPATH, 'assets', 'icon.ico')
@@ -98,4 +87,16 @@ coll = COLLECT(
     upx=True,
     upx_exclude=[],
     name='TOBot',
+)
+
+app = BUNDLE(
+    coll,
+    name='TOBot.app',
+    icon=app_icon,
+    bundle_identifier='com.tobot.app',
+    info_plist={
+        'NSPrincipalClass': 'NSApplication',
+        'NSAppleScriptEnabled': False,
+        'NSHighResolutionCapable': 'True' # Ensures the GUI doesn't look blurry on Retina displays
+    },
 )
